@@ -10,3 +10,6 @@ def create_app():
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     CORS(app)
 
+    db.init_app(app)
+
+    return app
